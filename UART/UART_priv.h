@@ -1,56 +1,66 @@
-
-/* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
- */
+/****************************************************/
+/* Title       : UART private file		            */
+/* Author      : Joseph Tharwat                 	*/
+/* Release     : 1.0                            	*/
+/* Last Update : 12-9-2022                       	*/
+/****************************************************/
 
 #ifndef UART_PRIV
 #define	UART_PRIV
 
-//data Register
-#define UDR     (*((volatile u8 *)0x2C))
+#define UDR  	*((volatile u8*)(0x2C))
 
-//USART Control and Status Register A
-#define UCSRA   (*((volatile u8 *)0x2B))  
-#define RXC 7   //USART Receive Complete(flag)
-#define TXC 6   //USART Transmit Complete(flag)
-#define UDRE 5  //USART Data Register Empty(flag)
+#define UCSRA  	*((volatile u8*)(0x2B))
+#define UCSRA_RXC_BIT	7
+#define UCSRA_TXC_BIT	6
+#define UCSRA_UDRE_BIT	5
+#define UCSRA_FE_BIT	4
+#define UCSRA_DOR_BIT	3
+#define UCSRA_PE_BIT	2
+#define UCSRA_U2X_BIT	1
+#define UCSRA_MPCM_BIT	0
 
-//USART Control and Status Register B
-#define UCSRB   (*((volatile u8 *)0x2A))
-#define RXCIE 7 //RX Complete Interrupt Enable
-#define TXCIE 6 //TX Complete Interrupt Enable
-#define UDRIE 5 //USART Data Register Empty Interrupt Enable
-#define RXEN  4 // Receiver Enable
-#define TXEN  3 // Transmitter Enable
-#define UCSZ2 2 //Character Size (combined with the UCSZ1:0 bit in UCSRC to select the size)
-#define RXB8  1 // Receive Data Bit 8(RXB8 is the ninth data bit in received)
-#define TXB8  0 //Transmit Data Bit 8(TXB8 is the ninth data bit in transmitted)
+#define UCSRB  				*((volatile u8*)(0x2A))
+#define UCSRB_RXCIE_BIT		7
+#define UCSRB_TXCIE_BIT		6
+#define UCSRB_UDRIE_BIT		5
+#define UCSRB_RXEN_BIT		4
+#define UCSRB_TXEN_BIT		3
+#define UCSRB_UCSZ2_BIT		2
+#define UCSRB_RXB8_BIT		1
+#define UCSRB_TXB8_BIT		0
 
-//USART Control and Status Register C
-#define UCSRC   (*((volatile u8 *)0x40))
-#define URSEL 7 //Register Select between UCSRC or the UBRRH (0 to write in UBRRH and 1 to write in UCSRC)
-#define UMSEL 6 //USART Mode Select between Asynchronous and Synchronous
-    #define Asynchronous_Operation  0
-    #define Synchronous_Operation   1
-#define UPM0 4  //Parity Mode 
-#define UPM1 5  //Parity Mode
-    /*
-     00 > Disabled
-     10 > Enabled, Even Parity
-     11 > Enabled, Odd Parity
-     */
-    #define Disabled_Parity_Mode    10
-    #define Even_Parity_Mode        11
-    #define Odd_Parity_Mode         12
-#define UCSZ0 1 //Character Size (combined with the UCSZ2 bit in UCSRB to select the size)
-#define UCSZ1 2 //Character Size (combined with the UCSZ2 bit in UCSRB to select the size)
-#define UCPOL 0 //Clock Polarity (falling or rising)
+#define UCSRC_UBRRH  		*((volatile u8*)(0x40))
+#define UCSRC_URSEL_BIT		7		//1 to use as UCSRC and 0 to use as UBRRH
+#define UCSRC_UMSEL_BIT		6
+#define UCSRC_UPM1_BIT		5
+#define UCSRC_UPM0_BIT		4
+#define UCSRC_USBS_BIT		3
+#define UCSRC_UCSZ1_BIT		2
+#define UCSRC_UCSZ0_BIT		1
+#define UCSRC_UCPOL_BIT		0
 
-//USART Baud Rate Registers UBRRL
-#define UBRRL    (*((volatile u8 *)0x29))   //8 least significant bits of theUSART baud rate 
+#define UBRRL  	*((volatile u8*)(0x29))
+
+
+#define UART_Data_5_Bit				5
+#define UART_Data_6_Bit				6
+#define UART_Data_7_Bit				7
+#define UART_Data_8_Bit				8
+#define UART_Data_9_Bit				9
+
+#define UART_Asynchronous			10
+#define UART_Synchronous			11
+
+#define UART_PriatyModeDisabled		12
+#define UART_PriatyModeEven			13
+#define UART_PriatyModeOdd			14
+
+#define UART_1_stopBit				1
+#define UART_2_stopBit				2
+
+#define UART_ClockPolarity_RF		15
+#define UART_ClockPolarity_FR		16
 
 #endif
 

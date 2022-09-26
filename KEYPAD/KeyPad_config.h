@@ -8,7 +8,7 @@
 
 #ifndef KEYPAD_CONFIG_H
 #define	KEYPAD_CONFIG_H
-#include "DIO_int.h"
+#include "../DIO/DIO_int.h"
 
 
 #define KEYPAD_R1C1   '7'
@@ -32,15 +32,15 @@
 #define KEYPAD_R4C4   '+'
 
 
-#define KEYPAD_ROW1     DIO_u8_PIN_16
-#define KEYPAD_ROW2     DIO_u8_PIN_17
-#define KEYPAD_ROW3     DIO_u8_PIN_18
-#define KEYPAD_ROW4     DIO_u8_PIN_19
+#define KEYPAD_ROW1     DIO_u8_PIN_8
+#define KEYPAD_ROW2     DIO_u8_PIN_9
+#define KEYPAD_ROW3     DIO_u8_PIN_10
+#define KEYPAD_ROW4     DIO_u8_PIN_11
 
-#define KEYPAD_COLUMN1  DIO_u8_PIN_20
-#define KEYPAD_COLUMN2  DIO_u8_PIN_21    
-#define KEYPAD_COLUMN3  DIO_u8_PIN_22   
-#define KEYPAD_COLUMN4  DIO_u8_PIN_23    
+#define KEYPAD_COLUMN1  DIO_u8_PIN_12
+#define KEYPAD_COLUMN2  DIO_u8_PIN_13
+#define KEYPAD_COLUMN3  DIO_u8_PIN_14
+#define KEYPAD_COLUMN4  DIO_u8_PIN_15
 
 /*internal
   external*/

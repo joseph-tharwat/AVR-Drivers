@@ -14,6 +14,5 @@
 void KEYPAD_vid_init(void);
 u8 KEYPAD_u8_GetButtonValue(void);
 
-
 #endif	
 

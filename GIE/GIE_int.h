@@ -1,19 +1,13 @@
+/************************************************/
+/* Title       : GIE Interface file              */
+/* Author      : Joseph Tharwat                 */
+/* Release     : 1.0                            */
+/* Last Update : 6-9-2022                       */
+/************************************************/
 
-
-/* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
- */
-
-// This is a guard condition so that contents of this file are not included
-// more than once.  
 #ifndef GIE_INT_H
-#define	GIE_INT_H
+#define GIE_INT_H
 
-void GIE_vid_SetEnable(void);
-void GIE_vid_Set_Disable(void);
+void GIE_vid_GIE();
 
 #endif
-

@@ -5,12 +5,12 @@
  * Created on August 17, 2021, 10:45 PM
  */
 
-#include "STD_types.h"
+#include "..\DIO\STD_Types.h"
 #include "LCD_int.h"
 #include "LCD_config.h"
 #include "LCD_priv.h"
-#include "DIO_int.h"
-#include "BIT_math.h"
+#include "..\DIO\DIO_int.h"
+#include "..\DIO\BIT_MATH.h"
 #include <avr/delay.h>
 
 
@@ -33,7 +33,8 @@ void LCD_ExecutData(u8 u8_DATA)
     _delay_ms(1);
     DIO_vid_SetPinValue(LCD_PIN_E,1);
     _delay_ms(1);
-    if(GET_BIT(u8_DATA,0)==1)
+
+    /*if(GET_BIT(u8_DATA,0)==1)
     {
         DIO_vid_SetPinValue(LCD_PIN_D0,1);
     }
@@ -103,7 +104,10 @@ void LCD_ExecutData(u8 u8_DATA)
     else
     {
         DIO_vid_SetPinValue(LCD_PIN_D7,0);
-    }
+    }*/
+
+    DIO_vid_SetPortC(u8_DATA);
+
     
     DIO_vid_SetPinValue(LCD_PIN_E,0);
     _delay_ms(1);

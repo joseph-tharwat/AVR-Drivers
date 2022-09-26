@@ -9,6 +9,7 @@
 #ifndef LCD_INT_H
 #define	LCD_INT_H
 
+#warning "LCD must be connected  to PORTC"
 
 void LCD_vid_init();
 void LCD_vid_WrithCMD(u8 u8_cmd);

@@ -1,26 +1,17 @@
-
-
-/* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
- */
+/****************************************************/
+/* Title       : UART Configration file             */
+/* Author      : Joseph Tharwat                 	*/
+/* Release     : 1.0                            	*/
+/* Last Update : 12-9-2022                       	*/
+/****************************************************/
 
 #ifndef UART_CONFIG
 #define	UART_CONFIG
 
-/*
- Asynchronous_Operation  
- Synchronous_Operation   
- */
-#define MODE Synchronous_Operation
-/*
- 00 > Disabled
- 10 > Enabled, Even Parity
- 11 > Enabled, Odd Parity
- */
-#define  Parity_Mode Disabled
+#include "UART_priv.h"
+
+
+
 
 
 #endif	

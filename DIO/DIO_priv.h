@@ -2,52 +2,79 @@
 /* Title       : DIO private file               */
 /* Author      : Joseph Tharwat                 */
 /* Release     : 1.0                            */
-/* Last Update : Aug 16, 2021                   */
+/* Last Update : 5-9-2022                       */
 /************************************************/
 
-#ifndef DIO_PRIV_H_
-#define DIO_PRIV_H_
+#ifndef DIO_priv_H_
+#define DIO_priv_H_
 
-#define DDRA    (*((volatile u8 *)0x3A))
-#define DDRB    (*((volatile u8 *)0x37))
-#define DDRC    (*((volatile u8 *)0x34))
-#define DDRD    (*((volatile u8 *)0x31))
+#define PORTA   *((volatile u8*)0x3B)
+#define PORTB	*((volatile u8*)0x38)
+#define PORTC	*((volatile u8*)0x35)
+#define PORTD	*((volatile u8*)0x32)
 
-#define PORTA   (*((volatile u8 *)0x3B))
-#define PORTB   (*((volatile u8 *)0x38))
-#define PORTC   (*((volatile u8 *)0x35))
-#define PORTD   (*((volatile u8 *)0x32))
+#define DDRA	*((volatile u8*)0x3A)
+#define DDRB	*((volatile u8*)0x37)
+#define DDRC	*((volatile u8*)0x34)
+#define DDRD	*((volatile u8*)0x31)
 
-#define PINA    (*((volatile u8 *)0x39))
-#define PINB    (*((volatile u8 *)0x36))
-#define PINC    (*((volatile u8 *)0x33))
-#define PIND    (*((volatile u8 *)0x30))
-
-
-#define DIO_u8_PORTA_DIRECTION  CONC_BIT(DIO_u8_DIR_PIN_7 , DIO_u8_DIR_PIN_6 , DIO_u8_DIR_PIN_5 , DIO_u8_DIR_PIN_4 , DIO_u8_DIR_PIN_3 , DIO_u8_DIR_PIN_2 , DIO_u8_DIR_PIN_1 , DIO_u8_DIR_PIN_0)
-#define DIO_u8_PORTB_DIRECTION  CONC_BIT(DIO_u8_DIR_PIN_15 , DIO_u8_DIR_PIN_14 , DIO_u8_DIR_PIN_13 , DIO_u8_DIR_PIN_12 , DIO_u8_DIR_PIN_11 , DIO_u8_DIR_PIN_10 , DIO_u8_DIR_PIN_9 , DIO_u8_DIR_PIN_8)
-#define DIO_u8_PORTC_DIRECTION  CONC_BIT(DIO_u8_DIR_PIN_23 , DIO_u8_DIR_PIN_22 , DIO_u8_DIR_PIN_21 , DIO_u8_DIR_PIN_20 , DIO_u8_DIR_PIN_19 , DIO_u8_DIR_PIN_18 , DIO_u8_DIR_PIN_17 , DIO_u8_DIR_PIN_16)
-#define DIO_u8_PORTD_DIRECTION  CONC_BIT(DIO_u8_DIR_PIN_31 , DIO_u8_DIR_PIN_30 , DIO_u8_DIR_PIN_29 , DIO_u8_DIR_PIN_28 , DIO_u8_DIR_PIN_27 , DIO_u8_DIR_PIN_26 , DIO_u8_DIR_PIN_25 , DIO_u8_DIR_PIN_24)
-
-#define DIO_u8_PORTA_START		0
-#define DIO_u8_PORTA_END		    7
-#define DIO_u8_PORTA_SIZE		8
-
-#define DIO_u8_PORTB_START		8
-#define DIO_u8_PORTB_END		    15
-#define DIO_u8_PORTB_SIZE		8
-
-#define DIO_u8_PORTC_START		16
-#define DIO_u8_PORTC_END		    23
-#define DIO_u8_PORTC_SIZE		8
-
-#define DIO_u8_PORTD_START		24
-#define DIO_u8_PORTD_END		    31
-#define DIO_u8_PORTD_SIZE		8
-
-#define DIO_u8_OUTPUT  1
-#define DIO_u8_INPUT  0
+#define PINA	*((volatile u8*)0x39)
+#define PINB	*((volatile u8*)0x36)
+#define PINC	*((volatile u8*)0x33)
+#define PIND	*((volatile u8*)0x30)
 
 
+#define PORTA_START 0
+#define PORTA_END   7
 
-#endif /* DIO_PRIV_H_ */
+#define PORTB_START 8
+#define PORTB_END   15
+
+#define PORTC_START 16
+#define PORTC_END   23
+
+#define PORTD_START 24
+#define PORTD_END   31
+
+#define DIO_u8_HIGH   1
+#define DIO_u8_LOW	  0
+
+#define DIO_u8_OUTPUT     1
+#define DIO_u8_INPUT	  0
+
+#define DIO_u8_PIN_0		0
+#define DIO_u8_PIN_1		1
+#define DIO_u8_PIN_2		2
+#define DIO_u8_PIN_3		3
+#define DIO_u8_PIN_4		4
+#define DIO_u8_PIN_5		5
+#define DIO_u8_PIN_6		6
+#define DIO_u8_PIN_7		7
+#define DIO_u8_PIN_8		8
+#define DIO_u8_PIN_9		9
+#define DIO_u8_PIN_10		10
+#define DIO_u8_PIN_11		11
+#define DIO_u8_PIN_12		12
+#define DIO_u8_PIN_13		13
+#define DIO_u8_PIN_14		14
+#define DIO_u8_PIN_15		15
+#define DIO_u8_PIN_16		16
+#define DIO_u8_PIN_17		17
+#define DIO_u8_PIN_18		18
+#define DIO_u8_PIN_19		19
+#define DIO_u8_PIN_20		20
+#define DIO_u8_PIN_21		21
+#define DIO_u8_PIN_22		22
+#define DIO_u8_PIN_23		23
+#define DIO_u8_PIN_24		24
+#define DIO_u8_PIN_25		25
+#define DIO_u8_PIN_26		26
+#define DIO_u8_PIN_27		27
+#define DIO_u8_PIN_28		28
+#define DIO_u8_PIN_29		29
+#define DIO_u8_PIN_30		30
+#define DIO_u8_PIN_31		31
+
+
+
+#endif

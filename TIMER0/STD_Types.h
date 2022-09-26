@@ -1,6 +1,6 @@
 /************************************************/
 /* Title       : STD_TYPES file                 */
-/* Author      : Khaled Mohsen                  */
+/* Author      : Joseph Tharwat                 */
 /* Release     : 1.0                            */
 /* Last Update : Aug 16, 2021                   */
 /************************************************/
